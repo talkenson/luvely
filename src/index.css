@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Inspiration&family=Montserrat&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --vh: 1vh;
+}
+
+.styled-bg {
+    @apply bg-zinc-50;
+}
+
+.gradient {
+    background: linear-gradient(310deg,theme('colors.rose.300'),theme('colors.pink.200'));
+    background-size: cover;
+    @apply bg-opacity-10;
+}
+
+.fix-gradient {
+    background-attachment: fixed;
+}
+
+a {
+    @apply text-white hover:underline;
+}
+
+h2 {
+    text-align: center;
+}
+
+.hovering-icon {
+    @apply transform hover:-translate-y-1 transition-transform;
+}
+.personCard {
+    @apply bg-white/20 py-4 px-2 rounded-xl backdrop-blur-sm transform hover:-translate-y-0.5 hover:shadow-md transition-all;
+}
+
+.screenHeight {
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+.floatOnBottom {
+    bottom: calc(env(safe-area-inset-bottom) + 2rem);
+}
